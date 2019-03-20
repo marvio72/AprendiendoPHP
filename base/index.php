@@ -17,23 +17,26 @@
         <div class="contenido">
 
             <?php
-            $persona = array(
-              'datos' => array(
-                'nombre' => 'Marco',
-                'pais' => 'México',
-                'profesion' => 'Desarrollador Web'
-              ),
-              'lenguajes' => array(
-                'front_end' => array('css', 'html5', 'javascript', 'jquery'),
-                'back_end' => array('php', 'mysql', 'pyton')
-              )
-            );
+               $tecnologias = array('CSS','HTML','JavaScript','jQuery');
+               $existe = in_array('HTML',$tecnologias);
             ?>
+            
             <pre>
-              <?php var_dump($persona); ?>
+              <?php var_dump($existe); ?>
             </pre>
+          
+            <!-- Buscar un elemento en un array multidimencional -->
+            <?php
+               $persona = array(
+                 'nombre' => 'Marco',
+                 'pais' => 'México',
+                 'profesion' => 'Desarrollador Web'
+               );
+               $existe2 = in_array('Marco', array_values($persona));
+            ?>
+
             <pre>
-              <?php print_r($persona['lenguajes']['front_end'][1]); ?>
+              <?php var_dump($existe2); ?>
             </pre>
 
 
