@@ -17,22 +17,13 @@
         <div class="contenido">
 
             <?php
-            $lenguaje = "JavaScript";
-
-            switch ($lenguaje) {
-              case 'PHP':
-                echo "Backend";
-                break;
-              case 'JavaScript':
-                echo "FrontEnd y Backend (NodeJS)";
-                break;
-              case 'HTML5':
-                echo "Front End";
-                break;
-              default:
-                echo "no valido";
-                break;
-            }
+              // versiones anteriores
+               $tecnologias = ['CSS','HTML','JavaScript','jQuery'];
+               echo $tecnologias[2];
+              // nuevas versiones
+              echo "<hr>";
+              $lenguajes = array('CSS','JQuery','HTML','JavaScript','JNode','PHP');
+              echo $lenguajes[4];
             ?>
 
         </div>
