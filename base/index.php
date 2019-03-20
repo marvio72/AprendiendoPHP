@@ -19,13 +19,20 @@
             <?php
               // versiones anteriores
                $tecnologias = ['CSS','HTML','JavaScript','jQuery'];
-               echo $tecnologias[2];
+               //print_r($tecnologias);
               // nuevas versiones
+            ?>
+              <pre><?php print_r($tecnologias);?></pre>
+              
+            <?php  
               echo "<hr>";
-              $lenguajes = array('CSS','JQuery','HTML','JavaScript','JNode','PHP');
-              echo $lenguajes[4];
+              $lenguajes = array('CSS','JQuery','HTML','JavaScript','JNode','PHP',20);
+              //echo $lenguajes[4];
             ?>
 
+            <pre>
+              <?php var_dump($lenguajes); ?>
+            </pre>
         </div>
     </div>
 
