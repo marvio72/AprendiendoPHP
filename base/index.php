@@ -15,26 +15,26 @@
         <h1>Aprendiendo PHP</h1>
 
         <div class="contenido">
-            <?php $premiere_leage = array('chelsea', 'manchester city', 'manchester united', 'tottenham', 'arsenal', 'liverpool', 'leicester'); ?>
-
-
-
             <?php
-            $i = 0;
-            while ($i <= count($premiere_leage)) {
-              if (count($premiere_leage) > 0) {
-                if ($i == count($premiere_leage)) {
-                  break;
-                }
-                echo "$premiere_leage[$i] <br/>";
-                if ($i + 1 === count($premiere_leage)) {
-                  echo "fin";
-                }
-              } else {
-                echo "no hay resultados";
-              }
-              $i++;
-            }
+               function saludar(){
+                 echo "Hola amigos!";
+               }
+               saludar();
+
+               function suma($a,$b){
+                $total = $a + $b;
+                return $total;
+               }
+               echo '<br/>';
+               echo suma(6,7);
+            ?>
+            <h2>Agenda Teléfonica</h2>
+            <?php
+               function usuario(){
+                 echo "Marco Rafael <br/>";
+                 echo "3339-5410-57 <br/>";
+               }
+               usuario();
             ?>
 
         </div>
