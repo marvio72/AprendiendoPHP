@@ -18,12 +18,11 @@
             <h2>Agenda Teléfonica</h2>
             <?php
             function usuario($nombre, $tel){
-              echo $nombre . "<br/>";
-              echo $tel . "<br/>";
-              echo "<hr>";
+                return $contacto = $nombre . " " . $tel;
             }
-            usuario('Marco Ruvalcaba','3339-5410-57');
-            usuario('Violeta González','3339-5787-77');
+            $usuario = usuario('Marco Ruvalcaba','3339-5410-57');
+            echo $usuario;
+           
 
             ?>
 
