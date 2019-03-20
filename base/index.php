@@ -15,26 +15,16 @@
         <h1>Aprendiendo PHP</h1>
 
         <div class="contenido">
-            <?php
-               function saludar(){
-                 echo "Hola amigos!";
-               }
-               saludar();
-
-               function suma($a,$b){
-                $total = $a + $b;
-                return $total;
-               }
-               echo '<br/>';
-               echo suma(6,7);
-            ?>
             <h2>Agenda Teléfonica</h2>
             <?php
-               function usuario(){
-                 echo "Marco Rafael <br/>";
-                 echo "3339-5410-57 <br/>";
-               }
-               usuario();
+            function usuario($nombre, $tel){
+              echo $nombre . "<br/>";
+              echo $tel . "<br/>";
+              echo "<hr>";
+            }
+            usuario('Marco Ruvalcaba','3339-5410-57');
+            usuario('Violeta González','3339-5787-77');
+
             ?>
 
         </div>
@@ -43,6 +33,6 @@
 
 
 
-</body>
+ </body>
 
-</html> 
+</html>
