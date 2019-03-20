@@ -18,18 +18,18 @@
             <?php
             $nombre = "Marco";
             $apellido = "Ruvalcaba";
-            $edad = 47;
-            echo $nombre . ' ' . $apellido;
-            echo "<br>";
-            echo "$nombre $apellido";
-            echo "<hr>";
-            echo "$nombre edad: $edad";
-            echo "<br>";
-            echo $nombre . " edad: " . $edad;
-
-
             ?>
 
+            <h1><?php echo $nombre . ' ' . $apellido; ?></h1>
+            <h1><?php echo "$nombre $apellido"; ?></h1>
+
+            <?php
+
+            echo "<h1>{$nombre} {$apellido}</h1>";
+            echo "<hr>";
+            echo "<h1>$nombre $apellido</h1>";
+
+            ?>
         </div>
     </div>
 
