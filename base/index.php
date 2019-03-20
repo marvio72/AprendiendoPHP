@@ -17,25 +17,25 @@
         <div class="contenido">
 
             <?php
-               $persona = array(
-                 'nombre' => 'Marco',
-                 'pais' => 'México',
-                 'profesion' => 'Desarrollador Web'
-               );
+            $persona = array(
+              'datos' => array(
+                'nombre' => 'Marco',
+                'pais' => 'México',
+                'profesion' => 'Desarrollador Web'
+              ),
+              'lenguajes' => array(
+                'front_end' => array('css', 'html5', 'javascript', 'jquery'),
+                'back_end' => array('php', 'mysql', 'pyton')
+              )
+            );
             ?>
+            <pre>
+              <?php var_dump($persona); ?>
+            </pre>
+            <pre>
+              <?php print_r($persona['lenguajes']['front_end'][1]); ?>
+            </pre>
 
-            <pre>
-              <?php print_r($persona); ?>
-            </pre>
-            <?php echo $persona['nombre']; ?>
-
-            <!-- Funciones utilizadas para poder acceder a los datos desde los indices. -->
-            <pre>
-              <?php print_r(array_values($persona)); ?>
-            </pre>
-            <pre>
-              <?php print_r(array_keys($persona)); ?>
-            </pre>
 
         </div>
     </div>
