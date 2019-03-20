@@ -17,50 +17,24 @@
         <div class="contenido">
 
             <?php
-
-            $tecnologias = ['CSS', 'HTML', 'JavaScript', 'jQuery'];
+               $persona = array(
+                 'nombre' => 'Marco',
+                 'pais' => 'México',
+                 'profesion' => 'Desarrollador Web'
+               );
             ?>
 
-            <pre><?php print_r($tecnologias); ?></pre>
-            <!-- Incrementamos un elemento al final del arreglo -->
-            <?php $tecnologias[] = 'Pyton'; ?>
-            <?php $tecnologias[] = 'Java'; ?>
-
-            <pre><?php print_r($tecnologias); ?></pre>
-
-            <?php  ?>
-            <?php $java = array_pop($tecnologias); ?>
-            <h1><?php echo $java; ?></h1>
-
             <pre>
-              <?php print_r($tecnologias); ?>
+              <?php print_r($persona); ?>
             </pre>
+            <?php echo $persona['nombre']; ?>
 
-            <?php
-               // Borrar el primer elemento o cualquier elemento
-            unset($tecnologias[0]);
-            ?>
+            <!-- Funciones utilizadas para poder acceder a los datos desde los indices. -->
             <pre>
-              <?php print_r($tecnologias); ?>
-            </pre>
-
-
-            <?php
-               //Borra el primer elemento y lo agrega a una variable
-            $html = array_shift($tecnologias);
-            ?>
-            <h1><?php echo $html; ?></h1>
-            <pre>
-              <?php print_r($tecnologias); ?>
-            </pre>
-
-            <?php //Remover ciertos elementos y agregar otos, el elemento eliminado lo asignamos a una variable ?>
-            <?php $array = array_splice($tecnologias, 1, 1, array('AngularJS','JQuery','Ionic')); ?>
-            <pre>
-              <?php print_r($array); ?>
+              <?php print_r(array_values($persona)); ?>
             </pre>
             <pre>
-              <?php print_r($tecnologias); ?>
+              <?php print_r(array_keys($persona)); ?>
             </pre>
 
         </div>
