@@ -17,28 +17,30 @@
         <div class="contenido">
 
             <?php
-               $tecnologias = array('CSS','HTML','JavaScript','jQuery');
-               $existe = in_array('HTML',$tecnologias);
+            $tecnologias = array('CSS', 'HTML', 'JavaScript', 'jQuery','Pyton','Ionic');
+            $existe = in_array('HTML', $tecnologias);
             ?>
             
-            <pre>
-              <?php var_dump($existe); ?>
-            </pre>
-          
-            <!-- Buscar un elemento en un array multidimencional -->
+            <h2>Lenguajes que Conozco</h2>
+            <ul>
+                <?php foreach ($tecnologias as $tecnologia) : ?>
+                  <li><?php echo $tecnologia; ?></li>
+                <?php endforeach; ?>
+            </ul>
+
             <?php
-               $persona = array(
-                 'nombre' => 'Marco',
-                 'pais' => 'México',
-                 'profesion' => 'Desarrollador Web'
-               );
-               $existe2 = in_array('Marco', array_values($persona));
+            $persona = array(
+              'nombre'    => 'Marco',
+              'pais'      => 'México',
+              'profesion' => 'Desarrollador Web'
+            );
             ?>
-
-            <pre>
-              <?php var_dump($existe2); ?>
-            </pre>
-
+            <h2>Datos Personales</h2>
+            <ul>
+              <?php foreach ($persona as $key => $val ) : ?>
+                <li><?php echo "$key: $val";?></li>
+              <?php endforeach; ?>
+            </ul>
 
         </div>
     </div>
