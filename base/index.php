@@ -17,29 +17,21 @@
         <div class="contenido">
 
             <?php
-            if (1 < 0) {
-              echo "1 es menor";
-            } else {
-              echo "1 es mayor";
-            }
-            echo "<hr>";
-            $edad1 = 13;
-            $edad2 = 11;
-            if ($edad1 < $edad2) {
-              echo "La edad 1 es menor";
-            } elseif ($edad1 == $edad2) {
-              echo "La edad es la misma en 1  y 2";
-            } else {
-              echo "La edad 2 es menor";
-            }
+            $lenguaje = "JavaScript";
 
-            echo "<hr>";
-
-            $numero1 = 7;
-            if($numero1 % 2 == 0){
-              echo "El numero es par";
-            } else {
-              echo "El numero es impar";
+            switch ($lenguaje) {
+              case 'PHP':
+                echo "Backend";
+                break;
+              case 'JavaScript':
+                echo "FrontEnd y Backend (NodeJS)";
+                break;
+              case 'HTML5':
+                echo "Front End";
+                break;
+              default:
+                echo "no valido";
+                break;
             }
             ?>
 
@@ -48,7 +40,7 @@
 
 
 
-
+ 
 </body>
 
-</html> 
+</html>
