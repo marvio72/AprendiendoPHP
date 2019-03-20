@@ -15,77 +15,28 @@
         <h1>Aprendiendo PHP</h1>
 
         <div class="contenido">
+            <?php $premiere_leage = array('chelsea', 'manchester city', 'manchester united', 'tottenham', 'arsenal', 'liverpool', 'leicester'); ?>
 
-            <?php  ?>
-            <?php for ($i = 0; $i < 100; $i++) : ?>
-            <?php echo $i . '<br>'; ?>
-            <?php endfor; ?>
 
-            <hr>
-
-            <?php  ?>
-            <?php
-            for ($i = 0; $i <= 100; $i++) {
-              echo $i . '<br>';
-            }
-            ?>
-
-            <hr>
 
             <?php
-            for ($i = 0; $i <= 100; $i++) {
-              if ($i == 5) {
-                echo "cinco <br>";
-                continue;
+            $i = 0;
+            while ($i <= count($premiere_leage)) {
+              if (count($premiere_leage) > 0) {
+                if ($i == count($premiere_leage)) {
+                  break;
+                }
+                echo "$premiere_leage[$i] <br/>";
+                if ($i + 1 === count($premiere_leage)) {
+                  echo "fin";
+                }
+              } else {
+                echo "no hay resultados";
               }
-              echo $i . '<br>';
+              $i++;
             }
             ?>
 
-            <hr>
-
-            <?php  //Para parar el ciclo cuando cumpla una condición
-            for ($i = 0; $i <= 100; $i++) {
-              if ($i == 5) {
-                echo "cinco <br>";
-                break;
-              }
-              echo $i . '<br>';
-            }
-            ?>
-
-            <hr>
-
-            <?php  //imprimir pares
-            for ($i = 0; $i <= 100; $i++) {
-              if ($i % 2 == 0) {
-                echo "$i <br>";
-                continue;
-              }
-            }
-            ?>
-
-            <hr>
-
-            <?php  //imprimir nones
-            echo "<h2>Nones</h2>";
-            for ($i = 0; $i <= 100; $i++) {
-              if ($i % 2 <> 0) {
-                echo "$i <br/>";
-                continue;
-              }
-            }
-            ?>
-
-            <hr>
-
-            <?php //Uso del for para barrer un arreglo
-              $tecnologias = array('CSS','HTML','JavaScript','jQuery','Pyton');
-
-              for ($i=0; $i < count($tecnologias) ; $i++) { 
-                echo $tecnologias[$i] . '<br/>';
-              }
-            ?>
         </div>
     </div>
 
