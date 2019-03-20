@@ -16,20 +16,23 @@
 
         <div class="contenido">
             <?php
-            $nombre = "Marco";
-            $apellido = "Ruvalcaba";
+
+            $titulo = "Aprendiendo PHP";
+
             ?>
 
-            <h1><?php echo $nombre . ' ' . $apellido; ?></h1>
-            <h1><?php echo "$nombre $apellido"; ?></h1>
+            <p><?php echo $titulo; ?></p>
 
             <?php
-
-            echo "<h1>{$nombre} {$apellido}</h1>";
-            echo "<hr>";
-            echo "<h1>$nombre $apellido</h1>";
-
+              /***************   *** Comentario *** ***************/
+              /* @Descripcion:  Varias lineas
+              /* @Acción     : 
+              /***************   *** ********** *** ***************/ 
+               
+              //Comentario en una sola linea.
             ?>
+
+
         </div>
     </div>
 
