@@ -13,20 +13,23 @@
 
     <div class="contenedor">
         <h1>Aprendiendo PHP</h1>
-        <h2>Variables</h2>
 
         <div class="contenido">
             <?php
-            $hola = "Hola Mundo";
-            $numero = 20;
+            $nombre = "Marco";
+            $apellido = "Ruvalcaba";
+            $edad = 47;
+            echo $nombre . ' ' . $apellido;
+            echo "<br>";
+            echo "$nombre $apellido";
+            echo "<hr>";
+            echo "$nombre edad: $edad";
+            echo "<br>";
+            echo $nombre . " edad: " . $edad;
 
-            echo $hola;
-            echo "</br>";
-            echo $numero;
 
-            $saludos = "<h1>Hola</h1>";
-            echo $saludos;
             ?>
+
         </div>
     </div>
 
