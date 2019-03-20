@@ -17,30 +17,46 @@
         <div class="contenido">
 
             <?php
-            $tecnologias = array('CSS', 'HTML', 'JavaScript', 'jQuery','Pyton','Ionic');
-            $existe = in_array('HTML', $tecnologias);
+            $persona = array(
+              'datos' => array(
+                'nombre' => 'Marco',
+                'pais' => 'México',
+                'profesion' => 'Desarrollador Web'
+              ),
+              'lenguajes' => array(
+                'front_end' => array('css', 'html5', 'javascript', 'jquery'),
+                'back_end' => array('php', 'mysql', 'pyton')
+              )
+            );
             ?>
+            <h2>Foreach arreglos Multidimensionales</h2>
             
-            <h2>Lenguajes que Conozco</h2>
             <ul>
-                <?php foreach ($tecnologias as $tecnologia) : ?>
-                  <li><?php echo $tecnologia; ?></li>
+                <?php foreach ($persona['datos'] as $person) : ?>
+                <li><?php echo $person; ?></li>
+                <?php endforeach; ?>
+
+                  <?php foreach ($persona as $leng) : ?>
+                  <?php if (array_key_exists('front_end', $leng)) : ?>
+                    <h2>Lenguajes de Front End</h2>
+                    <?php foreach ($leng['front_end'] as $front) : ?>
+                      <li><?php echo $front; ?></li>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+
+                  <?php if (array_key_exists('back_end', $leng)) : ?>
+                    <h2>Lenguajes de Back End</h2>
+                    <?php foreach ($leng['back_end'] as $back) : ?>
+                      <li><?php echo $back; ?></li>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+
                 <?php endforeach; ?>
             </ul>
 
-            <?php
-            $persona = array(
-              'nombre'    => 'Marco',
-              'pais'      => 'México',
-              'profesion' => 'Desarrollador Web'
-            );
-            ?>
-            <h2>Datos Personales</h2>
-            <ul>
-              <?php foreach ($persona as $key => $val ) : ?>
-                <li><?php echo "$key: $val";?></li>
-              <?php endforeach; ?>
-            </ul>
+
+           
+
 
         </div>
     </div>
