@@ -16,48 +16,76 @@
 
         <div class="contenido">
 
+            <?php  ?>
+            <?php for ($i = 0; $i < 100; $i++) : ?>
+            <?php echo $i . '<br>'; ?>
+            <?php endfor; ?>
+
+            <hr>
+
+            <?php  ?>
             <?php
-            $persona = array(
-              'datos' => array(
-                'nombre' => 'Marco',
-                'pais' => 'México',
-                'profesion' => 'Desarrollador Web'
-              ),
-              'lenguajes' => array(
-                'front_end' => array('css', 'html5', 'javascript', 'jquery'),
-                'back_end' => array('php', 'mysql', 'pyton')
-              )
-            );
+            for ($i = 0; $i <= 100; $i++) {
+              echo $i . '<br>';
+            }
             ?>
-            <h2>Foreach arreglos Multidimensionales</h2>
-            
-            <ul>
-                <?php foreach ($persona['datos'] as $person) : ?>
-                <li><?php echo $person; ?></li>
-                <?php endforeach; ?>
 
-                  <?php foreach ($persona as $leng) : ?>
-                  <?php if (array_key_exists('front_end', $leng)) : ?>
-                    <h2>Lenguajes de Front End</h2>
-                    <?php foreach ($leng['front_end'] as $front) : ?>
-                      <li><?php echo $front; ?></li>
-                  <?php endforeach; ?>
-                  <?php endif; ?>
+            <hr>
 
-                  <?php if (array_key_exists('back_end', $leng)) : ?>
-                    <h2>Lenguajes de Back End</h2>
-                    <?php foreach ($leng['back_end'] as $back) : ?>
-                      <li><?php echo $back; ?></li>
-                  <?php endforeach; ?>
-                  <?php endif; ?>
+            <?php
+            for ($i = 0; $i <= 100; $i++) {
+              if ($i == 5) {
+                echo "cinco <br>";
+                continue;
+              }
+              echo $i . '<br>';
+            }
+            ?>
 
-                <?php endforeach; ?>
-            </ul>
+            <hr>
 
+            <?php  //Para parar el ciclo cuando cumpla una condición
+            for ($i = 0; $i <= 100; $i++) {
+              if ($i == 5) {
+                echo "cinco <br>";
+                break;
+              }
+              echo $i . '<br>';
+            }
+            ?>
 
-           
+            <hr>
 
+            <?php  //imprimir pares
+            for ($i = 0; $i <= 100; $i++) {
+              if ($i % 2 == 0) {
+                echo "$i <br>";
+                continue;
+              }
+            }
+            ?>
 
+            <hr>
+
+            <?php  //imprimir nones
+            echo "<h2>Nones</h2>";
+            for ($i = 0; $i <= 100; $i++) {
+              if ($i % 2 <> 0) {
+                echo "$i <br/>";
+                continue;
+              }
+            }
+            ?>
+
+            <hr>
+
+            <?php //Uso del for para barrer un arreglo
+              $tecnologias = array('CSS','HTML','JavaScript','jQuery','Pyton');
+
+              for ($i=0; $i < count($tecnologias) ; $i++) { 
+                echo $tecnologias[$i] . '<br/>';
+              }
+            ?>
         </div>
     </div>
 
