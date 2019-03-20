@@ -13,12 +13,19 @@
 
     <div class="contenedor">
         <h1>Aprendiendo PHP</h1>
-
+        <h2>Variables</h2>
 
         <div class="contenido">
             <?php
-            $hola = "hola mundo";
+            $hola = "Hola Mundo";
+            $numero = 20;
+
             echo $hola;
+            echo "</br>";
+            echo $numero;
+
+            $saludos = "<h1>Hola</h1>";
+            echo $saludos;
             ?>
         </div>
     </div>
