@@ -40,9 +40,21 @@
            if(isset($_POST['notificaciones'])){
                 $notificaciones = $_POST['notificaciones'];
                 if($notificaciones == 'on'){
-                    echo "Se ha inscrito correctamente a las notificaciones";
+                    echo "Se ha inscrito correctamente a las notificaciones <br/>";
                 }
             } 
+        ?>
+        <?php
+           // Validad array de checkboxex
+           if(isset($_POST['curso'])){
+               $cursos = $_POST['curso'];
+               echo "Tus cursos son: <br/>";
+               foreach ($cursos as $curso) {
+                   echo $curso . '<br/>';
+               }
+           } else {
+               echo "No elegiste cursos";
+           };
         ?>
         
 
