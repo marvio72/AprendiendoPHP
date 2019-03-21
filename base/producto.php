@@ -17,8 +17,8 @@
         <div class="contenido">
             <h2>Descripción Producto</h2>
 
-            <p>ID: <?php echo $_GET['id'];?></p>
-            <p>Nombre: <?php echo $_GET['nombre']; ?></p>
+            <p>ID: <?php echo htmlspecialchars($_GET['id']);?></p>
+            <p>Nombre: <?php echo htmlspecialchars($_GET['nombre']); ?></p>
 
         </div>
     </div>
