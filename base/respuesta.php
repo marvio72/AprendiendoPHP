@@ -19,19 +19,31 @@
         <?php $apellido  = $resultado['apellido']; ?>
 
         <?php
+        // Validar inputs
            if(! (filter_has_var(INPUT_POST, 'nombre') && (strlen(filter_input(INPUT_POST,'nombre')) > 0) && 
            trim($nombre) != '')) {
                echo "El nombre es obligatorio";
            } else { ?>
                <p>Nombre: <?php echo $nombre; ?></p>
         <?php } ?>
-        
+        <!-- La manera mas sensilla igualmente poderosa -->
         <?php if(isset($apellido) && trim($apellido) != '') { ?>
             <p>Apellido: <?php echo $apellido; ?></p>
         <?php } else {
             echo "El apellido es obligatorio";
         }  ?>        
 
+        <hr>
+
+        <?php
+           // Validar un checkbox
+           if(isset($_POST['notificaciones'])){
+                $notificaciones = $_POST['notificaciones'];
+                if($notificaciones == 'on'){
+                    echo "Se ha inscrito correctamente a las notificaciones";
+                }
+            } 
+        ?>
         
 
 
