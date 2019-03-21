@@ -15,15 +15,17 @@
         <h1>Aprendiendo PHP</h1>
 
         <div class="contenido">
-            <h2>Tienda en línea</h2>
-            <a href="producto.php?id=20&nombre=curso">Ir a Producto</a>
-            
+            <h2>Descripción Producto</h2>
+
+            <p>ID: <?php echo $_GET['id'];?></p>
+            <p>Nombre: <?php echo $_GET['nombre']; ?></p>
+
         </div>
     </div>
 
 
 
 
- </body>
+</body>
 
-</html>
+</html> 
