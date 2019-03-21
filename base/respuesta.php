@@ -86,6 +86,31 @@
             }
         }
         ?>
+        
+        <?php // VALIDAR RADIO BUTTONS ?>
+
+        <?php  $opciones = array(
+               'pres' => 'presencial',
+               'online' => 'En Línea'
+        );?>
+
+        <?php
+           if(isset($_POST['opciones'])) {
+               $tipo_curso = $_POST['opciones'];
+               echo '<h2>Tipo de Curso elegido</h2>';
+               switch ($tipo_curso) {
+                    case 'pres':
+                        echo "Elegiste Presencial <br/>";
+                        break;
+                    case 'online':
+                        echo "Elegiste En linea <br/>";
+                        break;
+               }
+           } else {
+               echo '<hr>';
+               echo "No elegiste tipo de Curso";
+           }
+        ?>
 
         <!-- <?php var_dump($_POST); ?> -->
 
