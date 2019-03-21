@@ -14,7 +14,11 @@
     <div class="contenedor">
         <h1>Aprendiendo PHP</h1>
 
-        <?php $resultado = $_POST; ?>
+        <?php $resultado = $_GET; ?>
+
+        <?php
+           var_dump($resultado);
+        ?>
 
         <p>Nombre: <?php echo $resultado['nombre'];  ?></p>
         <p>Apellido: <?php echo $resultado['apellido'];  ?></p>
