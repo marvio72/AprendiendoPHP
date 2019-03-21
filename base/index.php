@@ -17,18 +17,31 @@
         <div class="contenido">
             <h2>Agenda Teléfonica</h2>
             <?php
-            function usuario($nombre = 'No proporcionado', $tel = '0000-0000-00'){
-                return $contacto = $nombre . " " . $tel;
-            }
-            $usuario = usuario('Marco Ruvalcaba','3339-5410-57');
-            echo $usuario;
-            echo '<hr>';
-            $usuario2 = usuario();
-            echo $usuario2;
-           
+                $agenda = array();
+
+                 function guardarUsuario($nombre,$tel){
+                 global $agenda;
+                 $agenda[] = array($nombre,$tel);
+               }
+
+                  guardarUsuario("Marco","123456");
+                  guardarUsuario("Juan","99393008");
+                  guardarUsuario("Violeta","1234789");
+
+                  function mostrarUsuario($id){
+                    global $agenda;
+                    $usuario = $agenda[$id];
+                    foreach ($usuario as $user) {
+                      echo $user . '<br/>';
+                    }
+                  }
+
+                  mostrarUsuario(2);
+
+                 
 
             ?>
-
+            
         </div>
     </div>
 
